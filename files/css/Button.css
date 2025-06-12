@@ -1,0 +1,189 @@
+
+/*****
+		dijit.form.Button
+		dijit.form.DropDownButton
+		dijit.form.ComboButton
+		dijit.form.ComboBox (partial)
+ *****/
+
+/* Styles from tundra */
+.dijitButtonNode {
+	/* enabled state - inner */
+	border: 1px solid;
+	padding: 2px 4px 2px 4px;
+	font-size: 11px;
+}
+
+.dj_webkit .dijitButtonNode {
+	padding: 4px 4px 4px 4px;
+}
+
+.dj_ff6_mac .dijitButtonNode {
+	padding-bottom: 3px 4px 2px 4px;
+}
+
+.dj_ff6_mac .dijitButtonNode {
+	padding: 3px 4px 2px 4px;
+}
+
+.dj_ie .dijitButtonNode {
+	padding-top: 2px;
+	padding-bottom: 1px;
+}
+
+.dj_webkit .dijitButtonActive .dijitButtonNode button,
+.dj_webkit .dijitButtonFocused .dijitButtonNode button {
+	outline: 1px dotted #000;
+}
+
+.dj_webkit .dijitButtonNode button:focus {
+	outline: none;
+}
+
+.dijitButtonNode button {
+	border: 0px; 
+	background-color: transparent;
+}
+
+/* IE default is bigger. */
+.dj_ie .dijitButtonNode button {
+  font-size: 11px;
+} 
+ 
+.dijitButton .dijitButtonText,
+.dijitToggleButton .dijitButtonText {
+	text-align: center; 
+	padding: 0 3px;
+	color: #333;
+	font-size: 11px;
+}
+
+.dijitArrowButton {
+	color: #111;
+}
+
+table.dijitComboButton {
+	border: 1px solid;
+	color: #333;
+}
+
+.dijitComboButton .dijitButtonText,
+.dijitDropDownButton .dijitButtonText{
+	text-align: center;
+	padding: 0 1px 0 3px;
+	color: #333;
+	font-size: 11px;
+}
+
+.dj_webkit .dijitComboButtonActive .dijitButtonNode,
+.dj_webkit .dijitComboButtonFocused .dijitButtonNode,
+.dj_webkit .dijitDropDownButtonActive .dijitButtonNode,
+.dj_webkit .dijitDropDownButtonFocused .dijitButtonNode {
+	outline: 1px dotted #000;
+}
+
+
+table.dijitComboButton .dijitDownArrowButton {
+	border-width: 0 0 0 1px;
+	border-style: solid;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+table.dijitComboButton .dijitButtonContents {
+	border: none;
+	background-image: none;
+	background-color: #FFF;
+}
+
+table.dijitComboButton.dijitComboButtonDisabled {
+	border-color: #B5C5D3; /* NOT THEMED */
+	color: #666;
+	background-color: #EEE;
+}
+
+.dijitComboButton .dijitDownArrowButton {
+	padding: 2px 3px
+}
+
+.dj_ff2 .dijitComboButton .dijitButtonContentsFocused,
+.dj_ff2 .dijitComboButton .dijitDownArrowButtonFocused {
+	border: 1px solid transparent; /*make transparent so FF2 focus rect. is visible */
+}
+
+.dijitButtonNode .dijitArrowButtonInner {
+	background-image:url("../img/spriteArrows.png");
+	background-position: left top;
+	width: 7px;
+	height: 7px;
+	font-size: 1px;
+	margin: 0px 2px 0px 2px;
+}
+
+.dijitDisabled .dijitButtonText {
+	color: #666;
+}
+
+.dijitButtonDisabled .dijitButtonNode,
+.dijitToggleButtonDisabled .dijitButtonNode,
+.dijitDropDownButtonDisabled .dijitButtonNode,
+.dijitComboButtonDisabled .dijitButtonNode,
+.dijitComboBoxDisabled,
+.dijitSpinnerDisabled,
+.dijitSpinnerDisabled .dijitButtonNode {
+	/* disabled state - inner */
+	opacity: .6;
+	filter: alpha(opacity=60);
+	border-color: #B5C5D3; /* NOT THEMED */
+	background-color: #EEE;
+}
+
+.dijitToolbar .dijitButtonDisabled .dijitButtonNode,
+.dijitToolbar .dijitToggleButtonDisabled .dijitButtonNode,
+.dijitToolbar .dijitDropDownButtonDisabled .dijitButtonNode,
+.dijitToolbar .dijitComboButtonDisabled .dijitButtonNode,
+.dijitToolbar .dijitComboBoxDisabled,
+.dijitToolbar .dijitSpinnerDisabled,
+.dijitToolbar .dijitSpinnerDisabled .dijitButtonNode {
+	opacity: .3;
+	filter: alpha(opacity=30);
+}
+
+.dijitButtonHover .dijitButtonNode,
+.dijitButtonNodeHover,
+.dijitToggleButtonHover .dijitButtonNode,
+.dijitDropDownButtonHover .dijitButtonNode,
+.dijitComboButtonHover .dijitButtonContents,
+.dijitComboButtonDownArrowHover .dijitDownArrowButton {
+}
+.dijitComboBoxHover .dijitDownArrowButton,
+.dijitSpinnerUpArrowHover .dijitUpArrowButton,
+.dijitSpinnerDownArrowHover .dijitDownArrowButton {
+}
+
+.dijitSpinnerUpArrowActive .dijitUpArrowButton,
+.dijitSpinnerDownArrowActive .dijitDownArrowButton,
+.dijitButtonActive .dijitButtonNode,
+.dijitToggleButtonActive .dijitButtonNode,
+.dijitDropDownButtonActive .dijitButtonNode,
+.dijitComboButtonActive .dijitButtonContents,
+.dijitDownArrowActive .dijitDownArrowButton,
+.dijitComboBoxActive .dijitDownArrowButton,
+.dijitStackController .dijitToggleButtonChecked .dijitButtonNode {
+}
+
+.dj_webkit .dijitToggleButtonActive .dijitButtonNode,
+.dj_webkit .dijitToggleButtonFocused .dijitButtonNode {
+	outline: 1px dotted #000;
+}
+
+.dijitDisabled .dijitArrowButtonInner {
+	background-position: -28px top;
+}
+.dijitUpArrowButton .dijitArrowButtonInner { 
+	background-position: -21px top; 
+}
+
+.dijitDisabled .dijitUpArrowButton .dijitArrowButtonInner { 
+	background-position: -49px top; 
+}
